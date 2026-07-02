@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">训练集大小与训练误差和验证误差的关系</title>
+  <desc id="desc">左图展示高偏差模型的训练误差和验证误差在较高水平收敛，右图展示高方差模型的两种误差仍有较大差距。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <marker id="gap-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+    <style>
+      .title { font: 700 27px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .panel-title { font: 700 21px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .label { font: 600 16px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #1e293b; }
+      .small { font: 15px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #475569; }
+      .math { font: italic 18px Georgia, "Times New Roman", serif; fill: #334155; }
+      .grid { stroke: #e2e8f0; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2; marker-end: url(#arrow); }
+      .train { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linecap: round; }
+      .cv { fill: none; stroke: #dc2626; stroke-width: 4; stroke-linecap: round; }
+      .gap { stroke: #7c3aed; stroke-width: 2; marker-start: url(#gap-arrow); marker-end: url(#gap-arrow); }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="658" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="44" class="title" text-anchor="middle">学习曲线：训练集大小与误差的关系</text>
+
+  <g>
+    <rect x="35" y="75" width="545" height="535" rx="15" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <text x="307" y="108" class="panel-title" text-anchor="middle">高偏差</text>
+
+    <line x1="105" y1="180" x2="545" y2="180" class="grid"/>
+    <line x1="105" y1="260" x2="545" y2="260" class="grid"/>
+    <line x1="105" y1="340" x2="545" y2="340" class="grid"/>
+    <line x1="105" y1="420" x2="545" y2="420" class="grid"/>
+    <line x1="210" y1="150" x2="210" y2="480" class="grid"/>
+    <line x1="325" y1="150" x2="325" y2="480" class="grid"/>
+    <line x1="440" y1="150" x2="440" y2="480" class="grid"/>
+
+    <line x1="105" y1="480" x2="555" y2="480" class="axis"/>
+    <line x1="105" y1="480" x2="105" y2="140" class="axis"/>
+    <text x="554" y="509" class="math" text-anchor="end">m<tspan baseline-shift="sub" font-size="12">train</tspan></text>
+    <text x="73" y="163" class="small" transform="rotate(-90 73 163)">误差</text>
+
+    <path d="M 125 455 C 220 408, 320 355, 535 335" class="train"/>
+    <path d="M 125 205 C 225 270, 340 315, 535 320" class="cv"/>
+
+    <line x1="180" y1="135" x2="225" y2="135" class="train"/>
+    <text x="238" y="141" class="small">
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan>
+    </text>
+    <line x1="335" y1="135" x2="380" y2="135" class="cv"/>
+    <text x="393" y="141" class="small">
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">cv</tspan>
+    </text>
+
+    <rect x="100" y="530" width="415" height="56" rx="10" fill="#ffffff" stroke="#fdba74"/>
+    <text x="307" y="553" class="label" text-anchor="middle">两条曲线在较高误差处接近</text>
+    <text x="307" y="576" class="small" text-anchor="middle">增加训练数据通常帮助有限</text>
+  </g>
+
+  <g>
+    <rect x="620" y="75" width="545" height="535" rx="15" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+    <text x="892" y="108" class="panel-title" text-anchor="middle">高方差</text>
+
+    <line x1="690" y1="180" x2="1130" y2="180" class="grid"/>
+    <line x1="690" y1="260" x2="1130" y2="260" class="grid"/>
+    <line x1="690" y1="340" x2="1130" y2="340" class="grid"/>
+    <line x1="690" y1="420" x2="1130" y2="420" class="grid"/>
+    <line x1="795" y1="150" x2="795" y2="480" class="grid"/>
+    <line x1="910" y1="150" x2="910" y2="480" class="grid"/>
+    <line x1="1025" y1="150" x2="1025" y2="480" class="grid"/>
+
+    <line x1="690" y1="480" x2="1140" y2="480" class="axis"/>
+    <line x1="690" y1="480" x2="690" y2="140" class="axis"/>
+    <text x="1139" y="509" class="math" text-anchor="end">m<tspan baseline-shift="sub" font-size="12">train</tspan></text>
+    <text x="658" y="163" class="small" transform="rotate(-90 658 163)">误差</text>
+
+    <path d="M 710 455 C 830 450, 970 445, 1120 435" class="train"/>
+    <path d="M 710 200 C 825 270, 960 320, 1120 345" class="cv"/>
+
+    <line x1="765" y1="135" x2="810" y2="135" class="train"/>
+    <text x="823" y="141" class="small">
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan>
+    </text>
+    <line x1="920" y1="135" x2="965" y2="135" class="cv"/>
+    <text x="978" y="141" class="small">
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">cv</tspan>
+    </text>
+
+    <line x1="1085" y1="350" x2="1085" y2="430" class="gap"/>
+    <text x="1068" y="394" class="small" text-anchor="end">较大差距</text>
+
+    <rect x="685" y="530" width="415" height="56" rx="10" fill="#ffffff" stroke="#d8b4fe"/>
+    <text x="892" y="553" class="label" text-anchor="middle">验证误差明显高于训练误差</text>
+    <text x="892" y="576" class="small" text-anchor="middle">增加训练数据通常有帮助</text>
+  </g>
+</svg>

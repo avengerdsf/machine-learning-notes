@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">机器学习项目的完整周期</title>
+  <desc id="desc">项目依次经过定义范围、收集数据、训练模型和生产部署，训练和部署结果会反馈到数据收集及模型训练阶段。</desc>
+  <defs>
+    <marker id="feedback-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <style>
+      .title { font: 700 28px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .stage { font: 700 21px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+      .number { font: 700 17px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #ffffff; }
+      .description { font: 600 17px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #1e293b; }
+      .small { font: 15px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #475569; }
+      .feedback-label { font: 600 15px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #b91c1c; }
+      .feedback { stroke: #dc2626; stroke-width: 2.3; fill: none; marker-end: url(#feedback-arrow); }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="598" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="48" class="title" text-anchor="middle">机器学习项目的完整周期</text>
+
+  <g>
+    <path d="M 40 95 H 270 L 300 155 L 270 215 H 40 Z" fill="#2563eb"/>
+    <text x="65" y="128" class="number">1</text>
+    <text x="165" y="154" class="stage" text-anchor="middle">定义项目范围</text>
+    <text x="165" y="181" class="small" text-anchor="middle" fill="#ffffff" style="fill:#dbeafe">Scope project</text>
+
+    <path d="M 305 95 H 535 L 565 155 L 535 215 H 305 L 335 155 Z" fill="#0891b2"/>
+    <text x="340" y="128" class="number">2</text>
+    <text x="435" y="154" class="stage" text-anchor="middle">收集数据</text>
+    <text x="435" y="181" class="small" text-anchor="middle" fill="#ffffff" style="fill:#cffafe">Collect data</text>
+
+    <path d="M 570 95 H 800 L 830 155 L 800 215 H 570 L 600 155 Z" fill="#d97706"/>
+    <text x="605" y="128" class="number">3</text>
+    <text x="700" y="154" class="stage" text-anchor="middle">训练模型</text>
+    <text x="700" y="181" class="small" text-anchor="middle" fill="#ffffff" style="fill:#ffedd5">Train model</text>
+
+    <path d="M 835 95 H 1090 L 1120 155 L 1090 215 H 835 L 865 155 Z" fill="#16a34a"/>
+    <text x="870" y="128" class="number">4</text>
+    <text x="977" y="154" class="stage" text-anchor="middle">部署到生产环境</text>
+    <text x="977" y="181" class="small" text-anchor="middle" fill="#ffffff" style="fill:#dcfce7">Deploy in production</text>
+  </g>
+
+  <g>
+    <rect x="55" y="245" width="220" height="78" rx="11" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="165" y="291" class="description" text-anchor="middle">定义项目目标</text>
+
+    <rect x="325" y="245" width="220" height="78" rx="11" fill="#ecfeff" stroke="#67e8f9" stroke-width="2"/>
+    <text x="435" y="278" class="description" text-anchor="middle">定义所需数据</text>
+    <text x="435" y="304" class="description" text-anchor="middle">并收集数据</text>
+
+    <rect x="590" y="245" width="220" height="78" rx="11" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <text x="700" y="273" class="description" text-anchor="middle">训练与错误分析</text>
+    <text x="700" y="300" class="description" text-anchor="middle">迭代改进模型</text>
+
+    <rect x="855" y="245" width="245" height="78" rx="11" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+    <text x="977" y="273" class="description" text-anchor="middle">部署系统</text>
+    <text x="977" y="300" class="description" text-anchor="middle">监控并持续维护</text>
+  </g>
+
+  <path d="M 700 323 V 385 H 435 V 331" class="feedback"/>
+  <text x="568" y="375" class="feedback-label" text-anchor="middle">错误分析指导重新收集数据</text>
+
+  <path d="M 977 323 V 455 H 700 V 331" class="feedback"/>
+  <text x="838" y="445" class="feedback-label" text-anchor="middle">生产反馈用于重新训练模型</text>
+
+  <path d="M 977 323 V 525 H 435 V 331" class="feedback"/>
+  <text x="706" y="515" class="feedback-label" text-anchor="middle">监控结果可能要求更新数据</text>
+
+  <text x="600" y="570" class="small" text-anchor="middle">机器学习项目不是单向流水线，而是根据错误分析和生产反馈持续迭代的循环。</text>
+</svg>

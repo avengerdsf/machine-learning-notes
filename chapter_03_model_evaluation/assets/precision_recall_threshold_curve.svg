@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+  <title id="title">分类阈值与精确率召回率的权衡</title>
+  <desc id="desc">精确率召回率曲线上标出零点九九、零点五和零点零一三个分类阈值，阈值降低时召回率提高而精确率降低。</desc>
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <marker id="curve-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+    <style>
+      .title { font: 700 27px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .axis-label { font: 600 18px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #1e293b; }
+      .label { font: 600 16px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #1e293b; }
+      .small { font: 15px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #475569; }
+      .math { font: italic 17px Georgia, "Times New Roman", serif; fill: #334155; }
+      .grid { stroke: #e2e8f0; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 2; marker-end: url(#axis-arrow); }
+      .curve { fill: none; stroke: #7c3aed; stroke-width: 5; stroke-linecap: round; }
+      .direction { fill: none; stroke: #7c3aed; stroke-width: 2.2; marker-end: url(#curve-arrow); }
+      .guide { stroke: #94a3b8; stroke-width: 1.4; stroke-dasharray: 6 5; }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="998" height="648" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="500" y="45" class="title" text-anchor="middle">阈值改变 Precision 与 Recall 的权衡</text>
+
+  <g aria-hidden="true">
+    <line x1="125" y1="135" x2="845" y2="135" class="grid"/>
+    <line x1="125" y1="245" x2="845" y2="245" class="grid"/>
+    <line x1="125" y1="355" x2="845" y2="355" class="grid"/>
+    <line x1="125" y1="465" x2="845" y2="465" class="grid"/>
+    <line x1="245" y1="90" x2="245" y2="530" class="grid"/>
+    <line x1="485" y1="90" x2="485" y2="530" class="grid"/>
+    <line x1="725" y1="90" x2="725" y2="530" class="grid"/>
+  </g>
+
+  <line x1="125" y1="530" x2="875" y2="530" class="axis"/>
+  <line x1="125" y1="530" x2="125" y2="72" class="axis"/>
+  <text x="875" y="570" class="axis-label" text-anchor="end">Recall</text>
+  <text x="75" y="100" class="axis-label" transform="rotate(-90 75 100)">Precision</text>
+
+  <text x="125" y="555" class="math" text-anchor="middle">0</text>
+  <text x="485" y="555" class="math" text-anchor="middle">0.5</text>
+  <text x="845" y="555" class="math" text-anchor="middle">1</text>
+  <text x="103" y="535" class="math" text-anchor="end">0</text>
+  <text x="103" y="360" class="math" text-anchor="end">0.5</text>
+  <text x="103" y="100" class="math" text-anchor="end">1</text>
+
+  <path d="M 165 105 C 300 108, 395 135, 485 205 C 600 295, 700 405, 825 505" class="curve"/>
+
+  <line x1="225" y1="114" x2="225" y2="530" class="guide"/>
+  <line x1="125" y1="114" x2="225" y2="114" class="guide"/>
+  <circle cx="225" cy="114" r="8" fill="#2563eb"/>
+  <rect x="168" y="145" width="190" height="76" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="263" y="174" class="math" text-anchor="middle">threshold = 0.99</text>
+  <text x="263" y="201" class="small" text-anchor="middle">高 Precision，低 Recall</text>
+
+  <line x1="485" y1="205" x2="485" y2="530" class="guide"/>
+  <line x1="125" y1="205" x2="485" y2="205" class="guide"/>
+  <circle cx="485" cy="205" r="8" fill="#16a34a"/>
+  <rect x="408" y="252" width="190" height="76" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <text x="503" y="281" class="math" text-anchor="middle">threshold = 0.5</text>
+  <text x="503" y="308" class="small" text-anchor="middle">折中位置示例</text>
+
+  <line x1="790" y1="477" x2="790" y2="530" class="guide"/>
+  <line x1="125" y1="477" x2="790" y2="477" class="guide"/>
+  <circle cx="790" cy="477" r="8" fill="#dc2626"/>
+  <rect x="685" y="252" width="215" height="76" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+  <text x="792" y="281" class="math" text-anchor="middle">threshold = 0.01</text>
+  <text x="792" y="308" class="small" text-anchor="middle">低 Precision，高 Recall</text>
+
+  <path d="M 360 122 C 455 148, 545 220, 620 302" class="direction"/>
+  <text x="554" y="161" class="label" text-anchor="middle">阈值降低</text>
+
+  <rect x="210" y="590" width="580" height="38" rx="9" fill="#faf5ff" stroke="#d8b4fe"/>
+  <text x="500" y="615" class="small" text-anchor="middle">沿曲线降低阈值：Recall 提高，Precision 降低</text>
+</svg>

@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="880" viewBox="0 0 1200 880" role="img" aria-labelledby="title desc">
+  <title id="title">模型的偏差和方差诊断</title>
+  <desc id="desc">四个面板依次展示高偏差、合适拟合、高方差以及高偏差与高方差同时出现的情况。</desc>
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <g id="plot-frame">
+      <line x1="30" y1="55" x2="445" y2="55" class="grid"/>
+      <line x1="30" y1="110" x2="445" y2="110" class="grid"/>
+      <line x1="30" y1="165" x2="445" y2="165" class="grid"/>
+      <line x1="95" y1="20" x2="95" y2="220" class="grid"/>
+      <line x1="175" y1="20" x2="175" y2="220" class="grid"/>
+      <line x1="255" y1="20" x2="255" y2="220" class="grid"/>
+      <line x1="335" y1="20" x2="335" y2="220" class="grid"/>
+      <line x1="30" y1="220" x2="455" y2="220" class="axis"/>
+      <line x1="30" y1="220" x2="30" y2="10" class="axis"/>
+    </g>
+    <g id="samples">
+      <circle cx="65" cy="190" r="5.5" class="point"/>
+      <circle cx="110" cy="145" r="5.5" class="point"/>
+      <circle cx="155" cy="95" r="5.5" class="point"/>
+      <circle cx="200" cy="60" r="5.5" class="point"/>
+      <circle cx="245" cy="45" r="5.5" class="point"/>
+      <circle cx="290" cy="65" r="5.5" class="point"/>
+      <circle cx="335" cy="105" r="5.5" class="point"/>
+      <circle cx="380" cy="155" r="5.5" class="point"/>
+      <circle cx="425" cy="205" r="5.5" class="point"/>
+    </g>
+    <style>
+      .title { font: 700 27px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .panel-title { font: 700 20px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .degree { font: italic 18px Georgia, "Times New Roman", serif; fill: #7c3aed; }
+      .label { font: 16px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #475569; }
+      .error { font: 600 16px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #1e293b; }
+      .grid { stroke: #e2e8f0; stroke-width: 1; }
+      .axis { stroke: #334155; stroke-width: 1.8; marker-end: url(#axis-arrow); }
+      .fit { fill: none; stroke: #dc2626; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .point { fill: #2563eb; stroke: #1e3a8a; stroke-width: 1.3; }
+      .region-label { font: 600 14px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #334155; }
+      .divider { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 6 5; }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="878" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="600" y="44" class="title" text-anchor="middle">偏差与方差的四种情况</text>
+
+  <g transform="translate(35 75)">
+    <rect x="0" y="0" width="540" height="340" rx="14" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+    <text x="270" y="30" class="panel-title" text-anchor="middle">1. 高偏差（欠拟合）</text>
+    <text x="270" y="55" class="degree" text-anchor="middle">d = 1</text>
+    <g transform="translate(40 68)">
+      <use href="#plot-frame"/>
+      <path d="M 50 180 L 440 90" class="fit"/>
+      <use href="#samples"/>
+    </g>
+    <text x="270" y="321" class="error" text-anchor="middle">
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan><tspan baseline-shift="baseline" font-size="16"> 较高；</tspan>
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">cv</tspan><tspan baseline-shift="baseline" font-size="16"> ≈ </tspan>
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(625 75)">
+    <rect x="0" y="0" width="540" height="340" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+    <text x="270" y="30" class="panel-title" text-anchor="middle">2. 合适拟合</text>
+    <text x="270" y="55" class="degree" text-anchor="middle">d = 2</text>
+    <g transform="translate(40 68)">
+      <use href="#plot-frame"/>
+      <path d="M 50 205 C 120 115, 165 45, 240 45 C 320 45, 370 120, 440 210" class="fit"/>
+      <use href="#samples"/>
+    </g>
+    <text x="270" y="321" class="error" text-anchor="middle">
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan><tspan baseline-shift="baseline" font-size="16"> 较低；</tspan>
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">cv</tspan><tspan baseline-shift="baseline" font-size="16"> 较低且差距小</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(35 450)">
+    <rect x="0" y="0" width="540" height="340" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <text x="270" y="30" class="panel-title" text-anchor="middle">3. 高方差（过拟合）</text>
+    <text x="270" y="55" class="degree" text-anchor="middle">d = 4</text>
+    <g transform="translate(40 68)">
+      <use href="#plot-frame"/>
+      <path d="M 50 215 C 80 180, 80 130, 110 145 C 145 165, 150 75, 200 60 C 240 45, 260 40, 290 65 C 325 90, 330 110, 335 105 C 360 90, 380 175, 425 205 C 438 215, 440 170, 445 120" class="fit"/>
+      <use href="#samples"/>
+    </g>
+    <text x="270" y="321" class="error" text-anchor="middle">
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan><tspan baseline-shift="baseline" font-size="16"> 较低；</tspan>
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">cv</tspan><tspan baseline-shift="baseline" font-size="16"> ≫ </tspan>
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(625 450)">
+    <rect x="0" y="0" width="540" height="340" rx="14" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+    <text x="270" y="30" class="panel-title" text-anchor="middle">4. 高偏差且高方差</text>
+    <text x="270" y="55" class="degree" text-anchor="middle">同一模型在不同区域呈现两种问题</text>
+    <g transform="translate(40 68)">
+      <rect x="30" y="20" width="215" height="200" fill="#fee2e2" opacity="0.45"/>
+      <rect x="245" y="20" width="200" height="200" fill="#ede9fe" opacity="0.55"/>
+      <use href="#plot-frame"/>
+      <line x1="245" y1="20" x2="245" y2="220" class="divider"/>
+      <text x="137" y="15" class="region-label" text-anchor="middle">局部过拟合（高方差）</text>
+      <text x="345" y="15" class="region-label" text-anchor="middle">局部欠拟合（高偏差）</text>
+      <path d="M 50 205 C 72 225, 88 112, 110 145 C 130 179, 142 64, 155 95 C 170 128, 185 35, 200 60 C 218 86, 228 28, 245 45 C 300 76, 365 112, 445 145" class="fit"/>
+      <use href="#samples"/>
+    </g>
+    <text x="270" y="321" class="error" text-anchor="middle">
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan><tspan baseline-shift="baseline" font-size="16"> 较高；</tspan>
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">cv</tspan><tspan baseline-shift="baseline" font-size="16"> ≫ </tspan>
+      <tspan font-style="italic">J</tspan><tspan baseline-shift="sub" font-size="11">train</tspan>
+    </text>
+  </g>
+
+  <circle cx="445" cy="838" r="5.5" class="point"/>
+  <text x="460" y="844" class="label">训练样本</text>
+  <line x1="570" y1="838" x2="625" y2="838" class="fit"/>
+  <text x="640" y="844" class="label">模型拟合曲线</text>
+</svg>

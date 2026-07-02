@@ -6,6 +6,7 @@
 
 - [第一章：监督学习](#第一章监督学习)
 - [第二章：深度学习](#第二章深度学习)
+- [第三章：模型评估](#第三章模型评估)
 
 ## 第一章：监督学习
 
@@ -20,3 +21,9 @@
 3. [激活函数的选择](chapter_02_deep_learning/03_activation_function_selection.md)：Sigmoid、ReLU 与线性激活函数的特点和适用场景。
 4. [Softmax 回归与多分类](chapter_02_deep_learning/04_softmax_regression_multiclass.md)：Softmax、多分类交叉熵、数值稳定实现与 PyTorch 示例。
 5. [多标签分类问题](chapter_02_deep_learning/05_multilabel_classification.md)：多标签输出、独立 Sigmoid、二元交叉熵与 PyTorch 示例。
+
+## 第三章：模型评估
+
+1. [模型评估](chapter_03_model_evaluation/01_model_evaluation.md)：训练集与测试集划分、回归误差、分类误差以及泛化能力评估。
+2. [模型的选择](chapter_03_model_evaluation/02_model_selection.md)：验证集划分、模型与超参数选择、偏差和方差诊断以及学习曲线。
+3. [机器学习的开发过程](chapter_03_model_evaluation/03_machine_learning_development_process.md)：迭代开发、错误分析、数据改进、迁移学习、项目生命周期、伦理与分类指标。
