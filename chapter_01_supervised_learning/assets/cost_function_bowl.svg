@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520" role="img" aria-labelledby="title desc">
+  <title id="title">线性回归代价函数曲面图</title>
+  <desc id="desc">学术风格的代价函数 J(w,b) 曲面图，展示参数 w 和 b 与代价函数之间的关系。</desc>
+  <defs>
+    <marker id="arrow" markerHeight="7" markerWidth="7" orient="auto" refX="6" refY="3">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <rect width="820" height="520" fill="#fff"/>
+
+  <g transform="translate(90 28)">
+    <polygon points="128,414 602,338 500,430 34,458" fill="#f8f8f8" stroke="#bdbdbd" stroke-width="1"/>
+    <polygon points="34,458 128,414 128,88 34,142" fill="#fcfcfc" stroke="#d0d0d0" stroke-width="1"/>
+    <polygon points="128,414 602,338 602,78 128,88" fill="#fcfcfc" stroke="#d0d0d0" stroke-width="1"/>
+
+    <g stroke="#e1e1e1" stroke-width="0.8" fill="none">
+      <path d="M81 436 L175 395 L175 86"/>
+      <path d="M128 428 L222 387 L222 85"/>
+      <path d="M175 420 L269 379 L269 84"/>
+      <path d="M222 412 L316 371 L316 83"/>
+      <path d="M269 404 L363 363 L363 82"/>
+      <path d="M316 396 L410 355 L410 81"/>
+      <path d="M363 388 L457 347 L457 80"/>
+      <path d="M410 380 L504 339 L504 79"/>
+
+      <path d="M57 447 L524 404"/>
+      <path d="M81 436 L548 381"/>
+      <path d="M105 425 L572 358"/>
+      <path d="M129 414 L596 335"/>
+
+      <path d="M34 142 L500 91"/>
+      <path d="M34 223 L500 169"/>
+      <path d="M34 304 L500 247"/>
+      <path d="M34 385 L500 325"/>
+    </g>
+
+    <g fill="none" stroke="#4f4f4f" stroke-width="1.1">
+      <path d="M143 154 C207 112 282 101 354 126 C425 101 500 112 562 154"/>
+      <path d="M124 190 C202 151 280 142 354 165 C428 142 506 151 581 190"/>
+      <path d="M105 227 C197 190 280 184 354 207 C428 184 511 190 600 227"/>
+      <path d="M87 267 C190 231 278 229 354 253 C430 229 518 231 618 267"/>
+      <path d="M72 308 C184 274 277 278 354 302 C431 278 524 274 633 308"/>
+      <path d="M61 350 C178 318 276 326 354 350 C432 326 530 318 644 350"/>
+      <path d="M55 392 C174 363 276 373 354 397 C432 373 534 363 650 392"/>
+
+      <path d="M143 154 C109 224 82 304 55 392"/>
+      <path d="M207 112 C187 198 175 287 174 363"/>
+      <path d="M282 101 C279 190 277 279 276 373"/>
+      <path d="M354 126 C354 205 354 302 354 397"/>
+      <path d="M425 101 C428 190 431 279 432 373"/>
+      <path d="M500 112 C514 198 528 287 534 363"/>
+      <path d="M562 154 C596 224 627 304 650 392"/>
+    </g>
+
+    <g fill="#d9d9d9" fill-opacity="0.72" stroke="#333" stroke-width="1">
+      <path d="M143 154 C207 112 282 101 354 126 C425 101 500 112 562 154 C520 239 456 310 354 397 C252 310 188 239 143 154 Z"/>
+    </g>
+
+    <g fill="none" stroke="#111" stroke-width="1.15">
+      <path d="M143 154 C207 112 282 101 354 126 C425 101 500 112 562 154"/>
+      <path d="M105 227 C197 190 280 184 354 207 C428 184 511 190 600 227"/>
+      <path d="M72 308 C184 274 277 278 354 302 C431 278 524 274 633 308"/>
+      <path d="M55 392 C174 363 276 373 354 397 C432 373 534 363 650 392"/>
+      <path d="M282 101 C279 190 277 279 276 373"/>
+      <path d="M354 126 C354 205 354 302 354 397"/>
+      <path d="M425 101 C428 190 431 279 432 373"/>
+    </g>
+
+    <g fill="none" stroke="#7a7a7a" stroke-width="1">
+      <ellipse cx="354" cy="397" rx="55" ry="12"/>
+      <ellipse cx="354" cy="397" rx="102" ry="22"/>
+      <ellipse cx="354" cy="397" rx="151" ry="33"/>
+      <ellipse cx="354" cy="397" rx="198" ry="44"/>
+    </g>
+
+    <circle cx="354" cy="397" r="4.5" fill="#111"/>
+    <line x1="354" y1="397" x2="421" y2="371" stroke="#111" stroke-width="1"/>
+    <text x="429" y="374" font-family="Times New Roman, serif" font-size="17" fill="#111">minimum</text>
+
+    <g stroke="#222" stroke-width="1.8" fill="none" marker-end="url(#arrow)">
+      <line x1="34" y1="458" x2="628" y2="337"/>
+      <line x1="34" y1="458" x2="145" y2="407"/>
+      <line x1="34" y1="458" x2="34" y2="68"/>
+    </g>
+
+    <g font-family="Times New Roman, serif" font-size="18" fill="#111">
+      <text x="638" y="342">w</text>
+      <text x="151" y="406">b</text>
+      <text x="-3" y="58">J(w,b)</text>
+    </g>
+
+    <g font-family="Times New Roman, serif" font-size="15" fill="#333">
+      <text x="304" y="488" text-anchor="middle">parameter space</text>
+      <text x="354" y="28" text-anchor="middle">(a) Quadratic cost surface for linear regression</text>
+    </g>
+  </g>
+</svg>

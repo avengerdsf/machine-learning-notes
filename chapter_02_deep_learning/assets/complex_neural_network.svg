@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="680" viewBox="0 0 1160 680" role="img" aria-labelledby="title desc">
+  <title id="title">四输入、两个隐藏层和一个输出的复杂神经网络</title>
+  <desc id="desc">四个输入节点全连接到隐藏层一的五个节点，再全连接到隐藏层二的三个节点，最后连接到一个输出节点。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.13"/>
+    </filter>
+    <style>
+      .layer-title { font: 700 23px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .layer-index { font: 15px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #64748b; }
+      .connection { stroke: #94a3b8; stroke-width: 1.7; opacity: 0.48; }
+      .node-label { font: italic 20px Georgia, "Times New Roman", serif; fill: #0f172a; text-anchor: middle; dominant-baseline: middle; }
+      .formula { font: italic 21px Georgia, "Times New Roman", serif; fill: #312e81; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="1160" height="680" rx="24" fill="url(#background)"/>
+  <rect x="335" y="82" width="150" height="470" rx="24" fill="#eef2ff" stroke="#a5b4fc" stroke-width="2" stroke-dasharray="7 7"/>
+  <rect x="645" y="82" width="150" height="470" rx="24" fill="#f3e8ff" stroke="#c084fc" stroke-width="2" stroke-dasharray="7 7"/>
+
+  <text x="130" y="46" class="layer-title" text-anchor="middle">输入层</text>
+  <text x="130" y="70" class="layer-index" text-anchor="middle">a⁽⁰⁾ = x，不计入网络层数</text>
+  <text x="410" y="46" class="layer-title" text-anchor="middle">隐藏层 1</text>
+  <text x="410" y="70" class="layer-index" text-anchor="middle">第 1 层，a⁽¹⁾</text>
+  <text x="720" y="46" class="layer-title" text-anchor="middle">隐藏层 2</text>
+  <text x="720" y="70" class="layer-index" text-anchor="middle">第 2 层，a⁽²⁾</text>
+  <text x="1010" y="46" class="layer-title" text-anchor="middle">输出层</text>
+  <text x="1010" y="70" class="layer-index" text-anchor="middle">第 3 层，a⁽³⁾</text>
+
+  <g aria-label="输入层到隐藏层一的全连接">
+    <line class="connection" x1="168" y1="160" x2="372" y2="120"/>
+    <line class="connection" x1="168" y1="160" x2="372" y2="215"/>
+    <line class="connection" x1="168" y1="160" x2="372" y2="310"/>
+    <line class="connection" x1="168" y1="160" x2="372" y2="405"/>
+    <line class="connection" x1="168" y1="160" x2="372" y2="500"/>
+    <line class="connection" x1="168" y1="270" x2="372" y2="120"/>
+    <line class="connection" x1="168" y1="270" x2="372" y2="215"/>
+    <line class="connection" x1="168" y1="270" x2="372" y2="310"/>
+    <line class="connection" x1="168" y1="270" x2="372" y2="405"/>
+    <line class="connection" x1="168" y1="270" x2="372" y2="500"/>
+    <line class="connection" x1="168" y1="380" x2="372" y2="120"/>
+    <line class="connection" x1="168" y1="380" x2="372" y2="215"/>
+    <line class="connection" x1="168" y1="380" x2="372" y2="310"/>
+    <line class="connection" x1="168" y1="380" x2="372" y2="405"/>
+    <line class="connection" x1="168" y1="380" x2="372" y2="500"/>
+    <line class="connection" x1="168" y1="490" x2="372" y2="120"/>
+    <line class="connection" x1="168" y1="490" x2="372" y2="215"/>
+    <line class="connection" x1="168" y1="490" x2="372" y2="310"/>
+    <line class="connection" x1="168" y1="490" x2="372" y2="405"/>
+    <line class="connection" x1="168" y1="490" x2="372" y2="500"/>
+  </g>
+
+  <g aria-label="隐藏层一到隐藏层二的全连接">
+    <line class="connection" x1="448" y1="120" x2="682" y2="190"/>
+    <line class="connection" x1="448" y1="120" x2="682" y2="310"/>
+    <line class="connection" x1="448" y1="120" x2="682" y2="430"/>
+    <line class="connection" x1="448" y1="215" x2="682" y2="190"/>
+    <line class="connection" x1="448" y1="215" x2="682" y2="310"/>
+    <line class="connection" x1="448" y1="215" x2="682" y2="430"/>
+    <line class="connection" x1="448" y1="310" x2="682" y2="190"/>
+    <line class="connection" x1="448" y1="310" x2="682" y2="310"/>
+    <line class="connection" x1="448" y1="310" x2="682" y2="430"/>
+    <line class="connection" x1="448" y1="405" x2="682" y2="190"/>
+    <line class="connection" x1="448" y1="405" x2="682" y2="310"/>
+    <line class="connection" x1="448" y1="405" x2="682" y2="430"/>
+    <line class="connection" x1="448" y1="500" x2="682" y2="190"/>
+    <line class="connection" x1="448" y1="500" x2="682" y2="310"/>
+    <line class="connection" x1="448" y1="500" x2="682" y2="430"/>
+  </g>
+
+  <g aria-label="隐藏层二到输出层的全连接">
+    <line class="connection" x1="758" y1="190" x2="968" y2="310"/>
+    <line class="connection" x1="758" y1="310" x2="968" y2="310"/>
+    <line class="connection" x1="758" y1="430" x2="968" y2="310"/>
+  </g>
+
+  <g filter="url(#shadow)" aria-label="输入节点">
+    <circle class="node input-node" cx="130" cy="160" r="38" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+    <circle class="node input-node" cx="130" cy="270" r="38" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+    <circle class="node input-node" cx="130" cy="380" r="38" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+    <circle class="node input-node" cx="130" cy="490" r="38" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+  </g>
+  <text x="130" y="160" class="node-label">x<tspan baseline-shift="sub" font-size="14">1</tspan></text>
+  <text x="130" y="270" class="node-label">x<tspan baseline-shift="sub" font-size="14">2</tspan></text>
+  <text x="130" y="380" class="node-label">x<tspan baseline-shift="sub" font-size="14">3</tspan></text>
+  <text x="130" y="490" class="node-label">x<tspan baseline-shift="sub" font-size="14">4</tspan></text>
+
+  <g filter="url(#shadow)" aria-label="隐藏层一节点">
+    <circle class="node hidden-one-node" cx="410" cy="120" r="38" fill="#e0e7ff" stroke="#6366f1" stroke-width="3"/>
+    <circle class="node hidden-one-node" cx="410" cy="215" r="38" fill="#e0e7ff" stroke="#6366f1" stroke-width="3"/>
+    <circle class="node hidden-one-node" cx="410" cy="310" r="38" fill="#e0e7ff" stroke="#6366f1" stroke-width="3"/>
+    <circle class="node hidden-one-node" cx="410" cy="405" r="38" fill="#e0e7ff" stroke="#6366f1" stroke-width="3"/>
+    <circle class="node hidden-one-node" cx="410" cy="500" r="38" fill="#e0e7ff" stroke="#6366f1" stroke-width="3"/>
+  </g>
+  <text x="410" y="120" class="node-label">a<tspan baseline-shift="sub" font-size="14">1</tspan><tspan baseline-shift="super" font-size="12">[1]</tspan></text>
+  <text x="410" y="215" class="node-label">a<tspan baseline-shift="sub" font-size="14">2</tspan><tspan baseline-shift="super" font-size="12">[1]</tspan></text>
+  <text x="410" y="310" class="node-label">a<tspan baseline-shift="sub" font-size="14">3</tspan><tspan baseline-shift="super" font-size="12">[1]</tspan></text>
+  <text x="410" y="405" class="node-label">a<tspan baseline-shift="sub" font-size="14">4</tspan><tspan baseline-shift="super" font-size="12">[1]</tspan></text>
+  <text x="410" y="500" class="node-label">a<tspan baseline-shift="sub" font-size="14">5</tspan><tspan baseline-shift="super" font-size="12">[1]</tspan></text>
+
+  <g filter="url(#shadow)" aria-label="隐藏层二节点">
+    <circle class="node hidden-two-node" cx="720" cy="190" r="38" fill="#f3e8ff" stroke="#a855f7" stroke-width="3"/>
+    <circle class="node hidden-two-node" cx="720" cy="310" r="38" fill="#f3e8ff" stroke="#a855f7" stroke-width="3"/>
+    <circle class="node hidden-two-node" cx="720" cy="430" r="38" fill="#f3e8ff" stroke="#a855f7" stroke-width="3"/>
+  </g>
+  <text x="720" y="190" class="node-label">a<tspan baseline-shift="sub" font-size="14">1</tspan><tspan baseline-shift="super" font-size="12">[2]</tspan></text>
+  <text x="720" y="310" class="node-label">a<tspan baseline-shift="sub" font-size="14">2</tspan><tspan baseline-shift="super" font-size="12">[2]</tspan></text>
+  <text x="720" y="430" class="node-label">a<tspan baseline-shift="sub" font-size="14">3</tspan><tspan baseline-shift="super" font-size="12">[2]</tspan></text>
+
+  <g filter="url(#shadow)" aria-label="输出节点">
+    <circle class="node output-node" cx="1010" cy="310" r="42" fill="#dcfce7" stroke="#22c55e" stroke-width="4"/>
+  </g>
+  <text x="1010" y="310" class="node-label">a<tspan baseline-shift="sub" font-size="14">1</tspan><tspan baseline-shift="super" font-size="12">[3]</tspan><tspan baseline-shift="baseline"> = ŷ</tspan></text>
+
+  <rect x="250" y="585" width="660" height="58" rx="15" fill="#ffffff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="580" y="621" class="formula">
+    a<tspan baseline-shift="sub" font-size="14">j</tspan><tspan baseline-shift="super" font-size="13">[l]</tspan>
+    <tspan baseline-shift="baseline"> = g</tspan><tspan baseline-shift="super" font-size="13">[l]</tspan>
+    <tspan baseline-shift="baseline">(w</tspan><tspan baseline-shift="sub" font-size="14">j</tspan><tspan baseline-shift="super" font-size="13">[l]T</tspan>
+    <tspan baseline-shift="baseline">a</tspan><tspan baseline-shift="super" font-size="13">[l−1]</tspan>
+    <tspan baseline-shift="baseline"> + b</tspan><tspan baseline-shift="sub" font-size="14">j</tspan><tspan baseline-shift="super" font-size="13">[l]</tspan><tspan baseline-shift="baseline">)</tspan>
+  </text>
+</svg>

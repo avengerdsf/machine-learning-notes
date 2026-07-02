@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="600" viewBox="0 0 1050 600" role="img" aria-labelledby="title desc">
+  <title id="title">多标签分类神经网络结构图</title>
+  <desc id="desc">道路图像经过共享隐藏层，分别输出汽车、公交车和行人三个独立的 Sigmoid 概率。</desc>
+  <defs>
+    <style>
+      .title { font: 700 25px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #111827; text-anchor: middle; }
+      .subtitle { font: 15px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #6b7280; text-anchor: middle; }
+      .label { font: 17px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #1f2937; }
+      .math { font: italic 18px Georgia, "Times New Roman", serif; fill: #312e81; }
+      .connection { stroke: #94a3b8; stroke-width: 1.5; opacity: 0.48; }
+      .output-connection { stroke: #64748b; stroke-width: 1.8; opacity: 0.62; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="1048" height="598" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+
+  <text x="170" y="48" class="title">输入</text>
+  <text x="170" y="74" class="subtitle">道路图像 / 输入特征 x</text>
+  <text x="480" y="48" class="title">共享隐藏层</text>
+  <text x="480" y="74" class="subtitle">所有标签共享特征表示</text>
+  <text x="790" y="48" class="title">独立输出</text>
+  <text x="790" y="74" class="subtitle">每个标签使用一个 Sigmoid</text>
+
+  <g aria-label="输入示意">
+    <rect x="65" y="165" width="210" height="270" rx="16" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="82" y="185" width="176" height="95" rx="8" fill="#dbeafe"/>
+    <circle cx="118" cy="220" r="18" fill="#fbbf24"/>
+    <path d="M82 280 L258 280 L258 418 L82 418 Z" fill="#d1d5db"/>
+    <path d="M156 280 L184 280 L205 418 L135 418 Z" fill="#4b5563"/>
+    <rect x="102" y="318" width="58" height="30" rx="6" fill="#2563eb"/>
+    <circle cx="114" cy="351" r="7" fill="#1f2937"/>
+    <circle cx="148" cy="351" r="7" fill="#1f2937"/>
+    <rect x="190" y="304" width="46" height="62" rx="5" fill="#f97316"/>
+    <circle cx="200" cy="369" r="7" fill="#1f2937"/>
+    <circle cx="226" cy="369" r="7" fill="#1f2937"/>
+    <circle cx="96" cy="383" r="8" fill="#16a34a"/>
+    <line x1="96" y1="391" x2="96" y2="414" stroke="#166534" stroke-width="4"/>
+    <line x1="96" y1="400" x2="84" y2="410" stroke="#166534" stroke-width="3"/>
+    <line x1="96" y1="400" x2="108" y2="410" stroke="#166534" stroke-width="3"/>
+    <text x="170" y="463" class="math" text-anchor="middle">x</text>
+  </g>
+
+  <g aria-label="输入到隐藏层连接">
+    <line class="connection" x1="275" y1="300" x2="452" y2="140"/>
+    <line class="connection" x1="275" y1="300" x2="452" y2="220"/>
+    <line class="connection" x1="275" y1="300" x2="452" y2="300"/>
+    <line class="connection" x1="275" y1="300" x2="452" y2="380"/>
+    <line class="connection" x1="275" y1="300" x2="452" y2="460"/>
+  </g>
+
+  <g aria-label="隐藏层到三个输出的全连接">
+    <line class="output-connection" x1="508" y1="140" x2="732" y2="180"/>
+    <line class="output-connection" x1="508" y1="140" x2="732" y2="300"/>
+    <line class="output-connection" x1="508" y1="140" x2="732" y2="420"/>
+    <line class="output-connection" x1="508" y1="220" x2="732" y2="180"/>
+    <line class="output-connection" x1="508" y1="220" x2="732" y2="300"/>
+    <line class="output-connection" x1="508" y1="220" x2="732" y2="420"/>
+    <line class="output-connection" x1="508" y1="300" x2="732" y2="180"/>
+    <line class="output-connection" x1="508" y1="300" x2="732" y2="300"/>
+    <line class="output-connection" x1="508" y1="300" x2="732" y2="420"/>
+    <line class="output-connection" x1="508" y1="380" x2="732" y2="180"/>
+    <line class="output-connection" x1="508" y1="380" x2="732" y2="300"/>
+    <line class="output-connection" x1="508" y1="380" x2="732" y2="420"/>
+    <line class="output-connection" x1="508" y1="460" x2="732" y2="180"/>
+    <line class="output-connection" x1="508" y1="460" x2="732" y2="300"/>
+    <line class="output-connection" x1="508" y1="460" x2="732" y2="420"/>
+  </g>
+
+  <g aria-label="隐藏层节点">
+    <circle cx="480" cy="140" r="28" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="480" cy="220" r="28" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="480" cy="300" r="28" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="480" cy="380" r="28" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="480" cy="460" r="28" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  </g>
+
+  <g aria-label="三个独立 Sigmoid 输出">
+    <circle cx="760" cy="180" r="28" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <circle cx="760" cy="300" r="28" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <circle cx="760" cy="420" r="28" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="760" y="186" class="math" text-anchor="middle">σ</text>
+    <text x="760" y="306" class="math" text-anchor="middle">σ</text>
+    <text x="760" y="426" class="math" text-anchor="middle">σ</text>
+  </g>
+
+  <g aria-label="标签说明">
+    <line x1="788" y1="180" x2="823" y2="180" class="output-connection" marker-end="url(#arrow)"/>
+    <line x1="788" y1="300" x2="823" y2="300" class="output-connection" marker-end="url(#arrow)"/>
+    <line x1="788" y1="420" x2="823" y2="420" class="output-connection" marker-end="url(#arrow)"/>
+    <rect x="832" y="146" width="160" height="68" rx="10" fill="#f0fdf4" stroke="#86efac"/>
+    <rect x="832" y="266" width="160" height="68" rx="10" fill="#f0fdf4" stroke="#86efac"/>
+    <rect x="832" y="386" width="160" height="68" rx="10" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="850" y="174" class="label">汽车</text>
+    <text x="850" y="198" class="math">a₁ = P(y₁=1|x)</text>
+    <text x="850" y="294" class="label">公交车</text>
+    <text x="850" y="318" class="math">a₂ = P(y₂=1|x)</text>
+    <text x="850" y="414" class="label">行人</text>
+    <text x="850" y="438" class="math">a₃ = P(y₃=1|x)</text>
+  </g>
+
+  <rect x="250" y="520" width="550" height="52" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="525" y="552" class="label" text-anchor="middle">示例：y = [1, 0, 1]，汽车和行人可同时为 1</text>
+  <text x="900" y="552" class="subtitle">不使用 Softmax，三个概率无需和为 1</text>
+</svg>

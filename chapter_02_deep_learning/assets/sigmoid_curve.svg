@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Sigmoid 激活函数曲线</title>
+  <desc id="desc">Sigmoid 函数在负无穷趋近零，在零点等于二分之一，在正无穷趋近一。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#374151"/>
+    </marker>
+    <style>
+      .title { font: 700 24px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #111827; }
+      .formula { font: italic 20px Georgia, "Times New Roman", serif; fill: #1d4ed8; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+      .axis { stroke: #374151; stroke-width: 1.8; marker-end: url(#arrow); }
+      .tick { font: 14px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #6b7280; }
+      .curve { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="798" height="498" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+  <text x="40" y="43" class="title">Sigmoid</text>
+  <text x="400" y="43" class="formula" text-anchor="middle">g(z) = 1 / (1 + e⁻ᶻ)</text>
+
+  <g aria-hidden="true">
+    <line class="grid" x1="100" y1="90" x2="100" y2="390"/>
+    <line class="grid" x1="250" y1="90" x2="250" y2="390"/>
+    <line class="grid" x1="400" y1="90" x2="400" y2="390"/>
+    <line class="grid" x1="550" y1="90" x2="550" y2="390"/>
+    <line class="grid" x1="700" y1="90" x2="700" y2="390"/>
+    <line class="grid" x1="100" y1="90" x2="700" y2="90"/>
+    <line class="grid" x1="100" y1="165" x2="700" y2="165"/>
+    <line class="grid" x1="100" y1="240" x2="700" y2="240"/>
+    <line class="grid" x1="100" y1="315" x2="700" y2="315"/>
+    <line class="grid" x1="100" y1="390" x2="700" y2="390"/>
+  </g>
+
+  <line class="axis" x1="90" y1="390" x2="718" y2="390"/>
+  <line class="axis" x1="400" y1="405" x2="400" y2="78"/>
+
+  <polyline class="curve" points="100.0,389.3 125.0,388.8 150.0,388.0 175.0,386.7 200.0,384.6 225.0,381.2 250.0,375.8 275.0,367.2 300.0,354.2 325.0,335.3 350.0,309.3 375.0,276.7 400.0,240.0 425.0,203.3 450.0,170.7 475.0,144.7 500.0,125.8 525.0,112.8 550.0,104.2 575.0,98.8 600.0,95.4 625.0,93.3 650.0,92.0 675.0,91.2 700.0,90.7"/>
+
+  <text x="100" y="416" class="tick" text-anchor="middle">−6</text>
+  <text x="250" y="416" class="tick" text-anchor="middle">−3</text>
+  <text x="400" y="416" class="tick" text-anchor="middle">0</text>
+  <text x="550" y="416" class="tick" text-anchor="middle">3</text>
+  <text x="700" y="416" class="tick" text-anchor="middle">6</text>
+  <text x="82" y="395" class="tick" text-anchor="end">0</text>
+  <text x="82" y="320" class="tick" text-anchor="end">0.25</text>
+  <text x="82" y="245" class="tick" text-anchor="end">0.5</text>
+  <text x="82" y="170" class="tick" text-anchor="end">0.75</text>
+  <text x="82" y="95" class="tick" text-anchor="end">1</text>
+  <text x="730" y="395" class="formula">z</text>
+  <text x="408" y="76" class="formula">g(z)</text>
+</svg>

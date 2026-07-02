@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" viewBox="0 0 1080 420" role="img" aria-labelledby="title desc">
+  <title id="title">欠拟合、合适拟合和过拟合示意图</title>
+  <desc id="desc">三幅并列图展示同一组训练数据在欠拟合、合适拟合和过拟合下的拟合曲线，以及训练误差和验证误差的典型关系。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <rect width="1080" height="420" fill="#fff"/>
+
+  <g font-family="Times New Roman, serif" fill="#111">
+    <text x="540" y="32" text-anchor="middle" font-size="22">Model fit and error diagnosis</text>
+  </g>
+
+  <g transform="translate(54 66)">
+    <g>
+      <rect x="0" y="0" width="300" height="250" fill="#fff" stroke="#d6d6d6"/>
+      <text x="150" y="-14" text-anchor="middle" font-family="Times New Roman, serif" font-size="19" fill="#111">Underfitting / High bias</text>
+      <g stroke="#e7e7e7" stroke-width="1">
+        <line x1="50" y1="40" x2="50" y2="210"/>
+        <line x1="100" y1="40" x2="100" y2="210"/>
+        <line x1="150" y1="40" x2="150" y2="210"/>
+        <line x1="200" y1="40" x2="200" y2="210"/>
+        <line x1="250" y1="40" x2="250" y2="210"/>
+        <line x1="35" y1="80" x2="270" y2="80"/>
+        <line x1="35" y1="125" x2="270" y2="125"/>
+        <line x1="35" y1="170" x2="270" y2="170"/>
+      </g>
+      <g stroke="#222" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+        <line x1="35" y1="210" x2="282" y2="210"/>
+        <line x1="35" y1="210" x2="35" y2="28"/>
+      </g>
+      <g fill="#2f6fb3" stroke="#173f68" stroke-width="1.2">
+        <circle cx="55" cy="178" r="5"/>
+        <circle cx="78" cy="150" r="5"/>
+        <circle cx="103" cy="112" r="5"/>
+        <circle cx="128" cy="76" r="5"/>
+        <circle cx="153" cy="64" r="5"/>
+        <circle cx="178" cy="82" r="5"/>
+        <circle cx="203" cy="118" r="5"/>
+        <circle cx="228" cy="157" r="5"/>
+        <circle cx="253" cy="184" r="5"/>
+      </g>
+      <path d="M46 166 L262 106" fill="none" stroke="#c74b45" stroke-width="3"/>
+      <g font-family="Times New Roman, serif" font-size="16" fill="#111">
+        <text x="92" y="238">J_train high</text>
+        <text x="92" y="260">J_cv high</text>
+      </g>
+    </g>
+
+    <g transform="translate(342 0)">
+      <rect x="0" y="0" width="300" height="250" fill="#fff" stroke="#d6d6d6"/>
+      <text x="150" y="-14" text-anchor="middle" font-family="Times New Roman, serif" font-size="19" fill="#111">Good fit</text>
+      <g stroke="#e7e7e7" stroke-width="1">
+        <line x1="50" y1="40" x2="50" y2="210"/>
+        <line x1="100" y1="40" x2="100" y2="210"/>
+        <line x1="150" y1="40" x2="150" y2="210"/>
+        <line x1="200" y1="40" x2="200" y2="210"/>
+        <line x1="250" y1="40" x2="250" y2="210"/>
+        <line x1="35" y1="80" x2="270" y2="80"/>
+        <line x1="35" y1="125" x2="270" y2="125"/>
+        <line x1="35" y1="170" x2="270" y2="170"/>
+      </g>
+      <g stroke="#222" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+        <line x1="35" y1="210" x2="282" y2="210"/>
+        <line x1="35" y1="210" x2="35" y2="28"/>
+      </g>
+      <g fill="#2f6fb3" stroke="#173f68" stroke-width="1.2">
+        <circle cx="55" cy="178" r="5"/>
+        <circle cx="78" cy="150" r="5"/>
+        <circle cx="103" cy="112" r="5"/>
+        <circle cx="128" cy="76" r="5"/>
+        <circle cx="153" cy="64" r="5"/>
+        <circle cx="178" cy="82" r="5"/>
+        <circle cx="203" cy="118" r="5"/>
+        <circle cx="228" cy="157" r="5"/>
+        <circle cx="253" cy="184" r="5"/>
+      </g>
+      <path d="M46 184 C76 143 96 98 129 74 C153 57 175 71 198 106 C221 143 240 172 262 188" fill="none" stroke="#c74b45" stroke-width="3"/>
+      <g font-family="Times New Roman, serif" font-size="16" fill="#111">
+        <text x="92" y="238">J_train low</text>
+        <text x="92" y="260">J_cv low</text>
+      </g>
+    </g>
+
+    <g transform="translate(684 0)">
+      <rect x="0" y="0" width="300" height="250" fill="#fff" stroke="#d6d6d6"/>
+      <text x="150" y="-14" text-anchor="middle" font-family="Times New Roman, serif" font-size="19" fill="#111">Overfitting / High variance</text>
+      <g stroke="#e7e7e7" stroke-width="1">
+        <line x1="50" y1="40" x2="50" y2="210"/>
+        <line x1="100" y1="40" x2="100" y2="210"/>
+        <line x1="150" y1="40" x2="150" y2="210"/>
+        <line x1="200" y1="40" x2="200" y2="210"/>
+        <line x1="250" y1="40" x2="250" y2="210"/>
+        <line x1="35" y1="80" x2="270" y2="80"/>
+        <line x1="35" y1="125" x2="270" y2="125"/>
+        <line x1="35" y1="170" x2="270" y2="170"/>
+      </g>
+      <g stroke="#222" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+        <line x1="35" y1="210" x2="282" y2="210"/>
+        <line x1="35" y1="210" x2="35" y2="28"/>
+      </g>
+      <g fill="#2f6fb3" stroke="#173f68" stroke-width="1.2">
+        <circle cx="55" cy="178" r="5"/>
+        <circle cx="78" cy="150" r="5"/>
+        <circle cx="103" cy="112" r="5"/>
+        <circle cx="128" cy="76" r="5"/>
+        <circle cx="153" cy="64" r="5"/>
+        <circle cx="178" cy="82" r="5"/>
+        <circle cx="203" cy="118" r="5"/>
+        <circle cx="228" cy="157" r="5"/>
+        <circle cx="253" cy="184" r="5"/>
+      </g>
+      <path d="M47 176 C58 206 68 119 78 150 C89 185 94 70 103 112 C112 151 119 38 128 76 C137 112 143 43 153 64 C164 86 169 120 178 82 C188 39 194 151 203 118 C214 83 219 190 228 157 C238 122 246 205 253 184" fill="none" stroke="#c74b45" stroke-width="3"/>
+      <g font-family="Times New Roman, serif" font-size="16" fill="#111">
+        <text x="92" y="238">J_train low</text>
+        <text x="92" y="260">J_cv high</text>
+      </g>
+    </g>
+  </g>
+
+  <g font-family="Times New Roman, serif" font-size="16" fill="#333">
+    <circle cx="392" cy="384" r="5" fill="#2f6fb3" stroke="#173f68" stroke-width="1.2"/>
+    <text x="408" y="389">training examples</text>
+    <line x1="556" y1="384" x2="596" y2="384" stroke="#c74b45" stroke-width="3"/>
+    <text x="608" y="389">model prediction</text>
+  </g>
+</svg>

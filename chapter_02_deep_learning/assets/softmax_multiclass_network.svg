@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1420" height="620" viewBox="0 0 1420 620" role="img" aria-labelledby="title desc">
+  <title id="title">Softmax 多分类神经网络结构图</title>
+  <desc id="desc">输入经过共享隐藏层和线性输出层产生三个 logits，Softmax 将其转换为和为一的三个类别概率，argmax 选择唯一类别。</desc>
+  <defs>
+    <style>
+      .title { font: 700 23px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #111827; text-anchor: middle; }
+      .subtitle { font: 14px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #6b7280; text-anchor: middle; }
+      .label { font: 16px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #1f2937; text-anchor: middle; }
+      .math { font: italic 18px Georgia, "Times New Roman", serif; fill: #312e81; text-anchor: middle; }
+      .connection { stroke: #94a3b8; stroke-width: 1.5; opacity: 0.55; }
+      .flow { stroke: #64748b; stroke-width: 1.8; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="1" y="1" width="1418" height="618" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+
+  <text x="130" y="46" class="title">输入</text>
+  <text x="130" y="72" class="subtitle">特征向量 x</text>
+  <text x="390" y="46" class="title">共享隐藏层</text>
+  <text x="390" y="72" class="subtitle">非线性特征</text>
+  <text x="650" y="46" class="title">线性输出层</text>
+  <text x="650" y="72" class="subtitle">3 个 logits</text>
+  <text x="855" y="46" class="title">Softmax</text>
+  <text x="855" y="72" class="subtitle">类别概率归一化</text>
+  <text x="1040" y="46" class="title">概率</text>
+  <text x="1040" y="72" class="subtitle">总和为 1</text>
+  <text x="1200" y="46" class="title">决策</text>
+  <text x="1200" y="72" class="subtitle">选择唯一类别</text>
+
+  <g aria-label="输入特征">
+    <rect x="45" y="205" width="170" height="210" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="130" y="275" class="math">x₁</text>
+    <text x="130" y="315" class="math">x₂</text>
+    <text x="130" y="355" class="math">⋮</text>
+    <text x="130" y="395" class="math">xₙ</text>
+  </g>
+
+  <g aria-label="输入到隐藏层连接">
+    <line class="connection" x1="215" y1="310" x2="360" y2="155"/>
+    <line class="connection" x1="215" y1="310" x2="360" y2="255"/>
+    <line class="connection" x1="215" y1="310" x2="360" y2="355"/>
+    <line class="connection" x1="215" y1="310" x2="360" y2="455"/>
+  </g>
+
+  <g aria-label="隐藏层到线性输出层的全连接">
+    <line class="connection" x1="420" y1="155" x2="620" y2="180"/>
+    <line class="connection" x1="420" y1="155" x2="620" y2="310"/>
+    <line class="connection" x1="420" y1="155" x2="620" y2="440"/>
+    <line class="connection" x1="420" y1="255" x2="620" y2="180"/>
+    <line class="connection" x1="420" y1="255" x2="620" y2="310"/>
+    <line class="connection" x1="420" y1="255" x2="620" y2="440"/>
+    <line class="connection" x1="420" y1="355" x2="620" y2="180"/>
+    <line class="connection" x1="420" y1="355" x2="620" y2="310"/>
+    <line class="connection" x1="420" y1="355" x2="620" y2="440"/>
+    <line class="connection" x1="420" y1="455" x2="620" y2="180"/>
+    <line class="connection" x1="420" y1="455" x2="620" y2="310"/>
+    <line class="connection" x1="420" y1="455" x2="620" y2="440"/>
+  </g>
+
+  <g aria-label="隐藏层节点">
+    <circle cx="390" cy="155" r="30" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="390" cy="255" r="30" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="390" cy="355" r="30" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle cx="390" cy="455" r="30" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  </g>
+
+  <g aria-label="三个线性 logits">
+    <circle cx="650" cy="180" r="30" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <circle cx="650" cy="310" r="30" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <circle cx="650" cy="440" r="30" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="650" y="186" class="math">z₁</text>
+    <text x="650" y="316" class="math">z₂</text>
+    <text x="650" y="446" class="math">z₃</text>
+  </g>
+
+  <g aria-label="logits 输入 Softmax">
+    <line class="flow" x1="680" y1="180" x2="760" y2="220"/>
+    <line class="flow" x1="680" y1="310" x2="760" y2="310"/>
+    <line class="flow" x1="680" y1="440" x2="760" y2="400"/>
+  </g>
+
+  <g aria-label="Softmax 模块">
+    <rect x="760" y="135" width="190" height="350" rx="18" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <text x="855" y="205" class="title">Softmax</text>
+    <text x="855" y="255" class="math">aⱼ = exp(zⱼ) / Σₖ exp(zₖ)</text>
+    <line x1="790" y1="285" x2="920" y2="285" stroke="#bbf7d0"/>
+    <text x="855" y="330" class="label">训练</text>
+    <text x="855" y="355" class="subtitle">在损失函数内部计算</text>
+    <text x="855" y="400" class="label">推理</text>
+    <text x="855" y="425" class="subtitle">显式计算类别概率</text>
+  </g>
+
+  <g aria-label="Softmax 输出概率">
+    <line class="flow" x1="950" y1="220" x2="1010" y2="180"/>
+    <line class="flow" x1="950" y1="310" x2="1010" y2="310"/>
+    <line class="flow" x1="950" y1="400" x2="1010" y2="440"/>
+    <circle cx="1040" cy="180" r="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="1040" cy="310" r="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="1040" cy="440" r="30" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="1040" y="186" class="math">a₁</text>
+    <text x="1040" y="316" class="math">a₂</text>
+    <text x="1040" y="446" class="math">a₃</text>
+    <text x="1040" y="505" class="math">a₁ + a₂ + a₃ = 1</text>
+  </g>
+
+  <g aria-label="argmax 决策">
+    <line class="connection" x1="1070" y1="180" x2="1150" y2="270"/>
+    <line class="connection" x1="1070" y1="310" x2="1150" y2="310"/>
+    <line class="connection" x1="1070" y1="440" x2="1150" y2="350"/>
+    <rect x="1150" y="250" width="120" height="120" rx="16" fill="#f8fafc" stroke="#64748b" stroke-width="2"/>
+    <text x="1210" y="302" class="title">argmax</text>
+    <text x="1210" y="335" class="math">ŷ</text>
+    <line class="flow" x1="1270" y1="310" x2="1315" y2="310"/>
+    <rect x="1320" y="270" width="82" height="80" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="1361" y="304" class="label">唯一</text>
+    <text x="1361" y="329" class="label">类别</text>
+  </g>
+
+  <text x="710" y="570" class="subtitle">多分类：所有类别相互竞争，最终只选择一个类别</text>
+</svg>

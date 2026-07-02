@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="820" viewBox="0 0 1100 820" role="img" aria-labelledby="title desc">
+  <title id="title">25-15-1 全连接神经网络结构图</title>
+  <desc id="desc">二十五个输入节点与十五个隐藏层神经元完全连接，十五个隐藏层神经元与一个输出神经元完全连接。</desc>
+  <defs>
+    <style>
+      .layer-title { font: 700 25px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #111827; text-anchor: middle; }
+      .layer-count { font: 15px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #6b7280; text-anchor: middle; }
+      .input-edge { stroke: #64748b; stroke-width: 0.65; opacity: 0.13; }
+      .output-edge { stroke: #64748b; stroke-width: 0.9; opacity: 0.28; }
+      .node-label { font: italic 17px Georgia, "Times New Roman", serif; fill: #374151; }
+      .architecture { font: 700 24px Georgia, "Times New Roman", serif; fill: #312e81; text-anchor: middle; }
+    </style>
+    <g id="input-fan">
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="150"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="188"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="226"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="264"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="302"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="340"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="378"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="416"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="454"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="492"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="530"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="568"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="606"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="644"/>
+      <line class="input-edge" x1="160" y1="130" x2="560" y2="682"/>
+    </g>
+  </defs>
+
+  <rect x="1" y="1" width="1098" height="818" rx="18" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+
+  <text x="160" y="42" class="layer-title">输入层</text>
+  <text x="160" y="68" class="layer-count">25 个输入特征</text>
+  <text x="560" y="42" class="layer-title">隐藏层</text>
+  <text x="560" y="68" class="layer-count">15 个神经元</text>
+  <text x="950" y="42" class="layer-title">输出层</text>
+  <text x="950" y="68" class="layer-count">1 个神经元</text>
+
+  <g aria-label="输入层到隐藏层的三百七十五条全连接线">
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 0 0 1 0 0)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.06 0 1 0 33.6)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.12 0 1 0 67.2)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.18 0 1 0 100.8)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.24 0 1 0 134.4)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.30 0 1 0 168.0)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.36 0 1 0 201.6)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.42 0 1 0 235.2)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.48 0 1 0 268.8)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.54 0 1 0 302.4)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.60 0 1 0 336.0)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.66 0 1 0 369.6)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.72 0 1 0 403.2)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.78 0 1 0 436.8)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.84 0 1 0 470.4)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.90 0 1 0 504.0)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -0.96 0 1 0 537.6)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -1.02 0 1 0 571.2)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -1.08 0 1 0 604.8)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -1.14 0 1 0 638.4)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -1.20 0 1 0 672.0)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -1.26 0 1 0 705.6)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -1.32 0 1 0 739.2)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -1.38 0 1 0 772.8)"/>
+    <use class="input-fan-use" href="#input-fan" transform="matrix(1 -1.44 0 1 0 806.4)"/>
+  </g>
+
+  <g aria-label="隐藏层到输出层的十五条全连接线">
+    <line class="output-edge" x1="560" y1="150" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="188" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="226" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="264" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="302" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="340" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="378" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="416" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="454" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="492" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="530" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="568" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="606" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="644" x2="950" y2="416"/>
+    <line class="output-edge" x1="560" y1="682" x2="950" y2="416"/>
+  </g>
+
+  <g aria-label="二十五个输入节点">
+    <circle class="node input-node" cx="160" cy="130" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="154" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="178" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="202" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="226" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="250" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="274" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="298" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="322" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="346" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="370" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="394" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="418" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="442" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="466" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="490" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="514" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="538" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="562" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="586" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="610" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="634" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="658" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="682" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+    <circle class="node input-node" cx="160" cy="706" r="7" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8"/>
+  </g>
+
+  <g aria-label="十五个隐藏层节点">
+    <circle class="node hidden-node" cx="560" cy="150" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="188" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="226" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="264" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="302" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="340" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="378" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="416" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="454" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="492" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="530" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="568" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="606" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="644" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <circle class="node hidden-node" cx="560" cy="682" r="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  </g>
+
+  <circle class="node output-node" cx="950" cy="416" r="25" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+
+  <text x="126" y="135" class="node-label">x₁</text>
+  <text x="126" y="423" class="node-label">x₁₃</text>
+  <text x="119" y="711" class="node-label">x₂₅</text>
+  <text x="584" y="156" class="node-label">a₁⁽¹⁾</text>
+  <text x="584" y="422" class="node-label">a₈⁽¹⁾</text>
+  <text x="584" y="688" class="node-label">a₁₅⁽¹⁾</text>
+  <text x="950" y="422" class="node-label" text-anchor="middle">ŷ</text>
+
+  <text x="550" y="775" class="architecture">25 → 15 → 1</text>
+</svg>
