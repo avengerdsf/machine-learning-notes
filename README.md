@@ -7,6 +7,7 @@
 - [第一章：监督学习](#第一章监督学习)
 - [第二章：深度学习](#第二章深度学习)
 - [第三章：模型评估](#第三章模型评估)
+- [第四章：决策树](#第四章决策树)
 
 ## 第一章：监督学习
 
@@ -27,3 +28,11 @@
 1. [模型评估](chapter_03_model_evaluation/01_model_evaluation.md)：训练集与测试集划分、回归误差、分类误差以及泛化能力评估。
 2. [模型的选择](chapter_03_model_evaluation/02_model_selection.md)：验证集划分、模型与超参数选择、偏差和方差诊断以及学习曲线。
 3. [机器学习的开发过程](chapter_03_model_evaluation/03_machine_learning_development_process.md)：迭代开发、错误分析、数据改进、迁移学习、项目生命周期、伦理与分类指标。
+
+## 第四章：决策树
+
+1. [决策树](chapter_04_decision_trees/01_decision_tree.md)：猫分类示例、递归学习、熵、信息增益、连续特征的阈值选择和完整建树算法。
+2. [One-hot 编码](chapter_04_decision_trees/02_one_hot_encoding.md)：多类别离散特征的二元化表示及其在决策树中的使用。
+3. [回归树](chapter_04_decision_trees/03_regression_tree.md)：叶节点均值、方差下降以及使用动物特征预测体重的课程示例。
+4. [随机森林](chapter_04_decision_trees/04_random_forest.md)：多棵决策树、放回抽样、Bagging、随机特征子集和预测聚合。
+5. [XGBoost](chapter_04_decision_trees/05_xgboost.md)：Boosting、梯度修正、正则化目标函数以及分类和回归代码示例。

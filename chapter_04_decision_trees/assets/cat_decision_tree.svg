@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-labelledby="title desc">
+  <title id="title">猫分类决策树</title>
+  <desc id="desc">根节点检查耳朵形状，尖耳朵分支检查脸型，垂耳朵分支检查胡须，最终输出猫或不是猫。</desc>
+  <defs>
+    <style>
+      .title { font: 700 27px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .node-title { font: 700 18px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .node-type { font: 14px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #64748b; }
+      .branch { font: 600 16px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #334155; }
+      .leaf { font: 700 18px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; }
+      .small { font: 15px "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; fill: #475569; }
+      .edge { fill: none; stroke: #64748b; stroke-width: 3; stroke-linecap: round; }
+      .path { fill: none; stroke: #16a34a; stroke-width: 5; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="1098" height="648" rx="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="550" y="43" class="title" text-anchor="middle">猫分类决策树</text>
+
+  <path d="M 550 160 L 300 265" class="path"/>
+  <path d="M 550 160 L 800 265" class="edge"/>
+  <path d="M 300 345 L 145 455" class="path"/>
+  <path d="M 300 345 L 405 455" class="edge"/>
+  <path d="M 800 345 L 695 455" class="edge"/>
+  <path d="M 800 345 L 955 455" class="edge"/>
+
+  <rect x="430" y="80" width="240" height="85" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+  <text x="550" y="113" class="node-title" text-anchor="middle">耳朵形状？</text>
+  <text x="550" y="140" class="node-type" text-anchor="middle">根节点</text>
+
+  <rect x="190" y="265" width="220" height="85" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+  <text x="300" y="298" class="node-title" text-anchor="middle">脸型？</text>
+  <text x="300" y="325" class="node-type" text-anchor="middle">决策节点</text>
+
+  <rect x="690" y="265" width="220" height="85" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+  <text x="800" y="298" class="node-title" text-anchor="middle">有胡须？</text>
+  <text x="800" y="325" class="node-type" text-anchor="middle">决策节点</text>
+
+  <text x="390" y="211" class="branch" text-anchor="middle">尖耳朵</text>
+  <text x="710" y="211" class="branch" text-anchor="middle">垂耳朵</text>
+  <text x="205" y="407" class="branch" text-anchor="middle">圆脸</text>
+  <text x="385" y="407" class="branch" text-anchor="middle">非圆脸</text>
+  <text x="715" y="407" class="branch" text-anchor="middle">有</text>
+  <text x="895" y="407" class="branch" text-anchor="middle">没有</text>
+
+  <rect x="55" y="455" width="180" height="82" rx="41" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="145" y="488" class="leaf" text-anchor="middle" fill="#15803d">猫</text>
+  <text x="145" y="515" class="node-type" text-anchor="middle">叶节点，y = 1</text>
+
+  <rect x="315" y="455" width="180" height="82" rx="41" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+  <text x="405" y="488" class="leaf" text-anchor="middle" fill="#b91c1c">不是猫</text>
+  <text x="405" y="515" class="node-type" text-anchor="middle">叶节点，y = 0</text>
+
+  <rect x="605" y="455" width="180" height="82" rx="41" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="695" y="488" class="leaf" text-anchor="middle" fill="#15803d">猫</text>
+  <text x="695" y="515" class="node-type" text-anchor="middle">叶节点，y = 1</text>
+
+  <rect x="865" y="455" width="180" height="82" rx="41" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+  <text x="955" y="488" class="leaf" text-anchor="middle" fill="#b91c1c">不是猫</text>
+  <text x="955" y="515" class="node-type" text-anchor="middle">叶节点，y = 0</text>
+
+  <rect x="238" y="570" width="624" height="48" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+  <text x="550" y="600" class="small" text-anchor="middle">示例路径：尖耳朵 → 圆脸 → 预测为猫；未经过的胡须节点不参与本次预测。</text>
+</svg>
