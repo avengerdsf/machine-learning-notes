@@ -123,6 +123,22 @@ X = np.array([[2104, 5],
 mu = X.mean(axis=0)
 sigma = X.std(axis=0)
 X_scaled = (X - mu) / sigma
+
+print("mu:", np.round(mu, 4))
+print("sigma:", np.round(sigma, 4))
+print("X_scaled:")
+print(np.round(X_scaled, 4))
+```
+
+预期输出：
+
+```text
+mu: [1684.6667    3.6667]
+sigma: [300.4012   0.9428]
+X_scaled:
+[[ 1.3959  1.4142]
+ [-0.8944 -0.7071]
+ [-0.5016 -0.7071]]
 ```
 
 ## 7. 多项式回归
@@ -228,6 +244,16 @@ if __name__ == "__main__":
     print("学习到的 w:", np.round(w, 4))
     print("学习到的 b:", round(b, 4))
     print("预测房价:", round(price[0], 2))
+```
+
+预期输出：
+
+```text
+初始代价: 43605.2043
+最终代价: 288.2161
+学习到的 w: [51.5205 48.6487]
+学习到的 b: 314.8
+预测房价: 299.33
 ```
 
 ## 11. 小结

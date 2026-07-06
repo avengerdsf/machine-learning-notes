@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="500" viewBox="0 0 760 500">
+  <defs>
+    <style>
+      .title{font:700 24px Arial,"Microsoft YaHei",sans-serif;fill:#111827;text-anchor:middle}
+      .label{font:15px Arial,"Microsoft YaHei",sans-serif;fill:#374151}
+      .small{font:13px Arial,"Microsoft YaHei",sans-serif;fill:#4b5563}
+      .user{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:12}
+      .item{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:12}
+      .vec{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:12}
+      .score{fill:#fef2f2;stroke:#dc2626;stroke-width:2;rx:12}
+      .arrow{stroke:#111827;stroke-width:2;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111827"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="500" fill="#ffffff"/>
+  <text x="380" y="38" class="title">基于内容的双塔推荐模型</text>
+
+  <g transform="translate(70,90)">
+    <rect x="0" y="0" width="180" height="105" class="user"/>
+    <text x="90" y="30" class="label" text-anchor="middle">用户特征 xᵤ</text>
+    <text x="90" y="60" class="small" text-anchor="middle">年龄、地区、历史行为</text>
+    <text x="90" y="84" class="small" text-anchor="middle">浏览、收藏、购买</text>
+
+    <rect x="0" y="210" width="180" height="105" class="item"/>
+    <text x="90" y="240" class="label" text-anchor="middle">物品特征 xₘ</text>
+    <text x="90" y="270" class="small" text-anchor="middle">类型、年份、文本、标签</text>
+    <text x="90" y="294" class="small" text-anchor="middle">价格、作者、类别</text>
+  </g>
+
+  <line x1="260" y1="142" x2="340" y2="142" class="arrow"/>
+  <line x1="260" y1="352" x2="340" y2="352" class="arrow"/>
+
+  <g transform="translate(350,90)">
+    <rect x="0" y="0" width="150" height="105" class="vec"/>
+    <text x="75" y="32" class="label" text-anchor="middle">用户网络 fᵤ</text>
+    <text x="75" y="68" class="small" text-anchor="middle">输出向量 vᵤ</text>
+
+    <rect x="0" y="210" width="150" height="105" class="vec"/>
+    <text x="75" y="242" class="label" text-anchor="middle">物品网络 fₘ</text>
+    <text x="75" y="278" class="small" text-anchor="middle">输出向量 vₘ</text>
+  </g>
+
+  <line x1="510" y1="142" x2="590" y2="222" class="arrow"/>
+  <line x1="510" y1="352" x2="590" y2="272" class="arrow"/>
+
+  <g transform="translate(600,205)">
+    <rect x="0" y="0" width="110" height="90" class="score"/>
+    <text x="55" y="30" class="label" text-anchor="middle">点积打分</text>
+    <text x="55" y="58" class="small" text-anchor="middle">ŷ = vᵤ · vₘ</text>
+  </g>
+
+  <text x="380" y="445" class="label" text-anchor="middle">训练后把用户和物品映射到同一向量空间，点积越大表示匹配程度越高。</text>
+</svg>

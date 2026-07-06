@@ -65,6 +65,17 @@ print("output weight shape:", model[2].weight.shape)
 print("output bias shape:", model[2].bias.shape)
 ```
 
+预期输出：
+
+```text
+input shape: torch.Size([4, 25])
+output shape: torch.Size([4, 1])
+hidden weight shape: torch.Size([15, 25])
+hidden bias shape: torch.Size([15])
+output weight shape: torch.Size([1, 15])
+output bias shape: torch.Size([1])
+```
+
 输入批次形状为 `(4, 25)`，网络对每个样本独立执行相同计算，因此输出形状为 `(4, 1)`。各参数形状由 `nn.Linear` 的 `in_features` 和 `out_features` 决定：
 
 $$

@@ -154,6 +154,9 @@ import torch
 from torch import nn
 
 
+torch.manual_seed(0)
+
+
 class MultiLabelClassifier(nn.Module):
     def __init__(self):
         super().__init__()
@@ -193,6 +196,19 @@ print("targets shape:", targets.shape)
 print("probabilities shape:", probabilities.shape)
 print("predictions:", predictions)
 print("loss:", loss.item())
+```
+
+预期输出：
+
+```text
+logits shape: torch.Size([4, 3])
+targets shape: torch.Size([4, 3])
+probabilities shape: torch.Size([4, 3])
+predictions: tensor([[1, 1, 0],
+        [0, 1, 0],
+        [0, 1, 0],
+        [0, 1, 0]])
+loss: 0.6948112845420837
 ```
 
 `logits`、`targets` 和 `probabilities` 的形状均为 `(4, 3)`。`predictions` 中每行可以包含多个 $1$，这正是多标签分类与 Softmax 多分类的核心区别。

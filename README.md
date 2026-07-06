@@ -8,6 +8,7 @@
 - [第二章：深度学习](#第二章深度学习)
 - [第三章：模型评估](#第三章模型评估)
 - [第四章：决策树](#第四章决策树)
+- [第五章：无监督学习](#第五章无监督学习)
 
 ## 第一章：监督学习
 
@@ -36,3 +37,10 @@
 3. [回归树](chapter_04_decision_trees/03_regression_tree.md)：叶节点均值、方差下降以及使用动物特征预测体重的课程示例。
 4. [随机森林](chapter_04_decision_trees/04_random_forest.md)：多棵决策树、放回抽样、Bagging、随机特征子集和预测聚合。
 5. [XGBoost](chapter_04_decision_trees/05_xgboost.md)：Boosting、梯度修正、正则化目标函数以及分类和回归代码示例。
+
+## 第五章：无监督学习
+
+1. [K-means 聚类](chapter_05_unsupervised_learning/01_kmeans.md)：聚类问题、簇分配、质心更新、优化目标、随机初始化、聚类数量选择及 NumPy 完整实现。
+2. [异常检测算法](chapter_05_unsupervised_learning/02_anomaly_detection.md)：高斯分布、参数估计、概率阈值、评估指标、特征选择、多元高斯分布及 NumPy 完整实现。
+3. [推荐系统](chapter_05_unsupervised_learning/03_recommender_systems.md)：评分矩阵、协同过滤、二元标签、均值归一化、相关物品、基于内容的推荐和 NumPy 完整实现。
+4. [PCA 主成分分析](chapter_05_unsupervised_learning/04_pca.md)：降维动机、数据预处理、SVD 主成分、投影重建、选择主成分数量及 NumPy 完整实现。

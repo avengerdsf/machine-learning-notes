@@ -116,6 +116,16 @@ model.fit(X_train, y_train)
 prediction = model.predict(
     np.array([[2.8, 3.2]], dtype=np.float32)
 )
+
+print("prediction shape:", prediction.shape)
+print("prediction:", prediction)
+```
+
+预期输出中 `prediction shape` 固定为 `(1,)`；`prediction` 的具体类别由安装的 XGBoost 版本和训练细节决定：
+
+```text
+prediction shape: (1,)
+prediction: [类别编号]
 ```
 
 回归任务使用相同的训练接口，只需将模型替换为 `XGBRegressor`，并把标签改为连续值：
@@ -137,6 +147,16 @@ model.fit(X_train, y_weight)
 prediction = model.predict(
     np.array([[2.8, 3.2]], dtype=np.float32)
 )
+
+print("prediction shape:", prediction.shape)
+print("prediction:", prediction)
+```
+
+预期输出中 `prediction shape` 固定为 `(1,)`；`prediction` 的具体数值由安装的 XGBoost 版本和训练细节决定：
+
+```text
+prediction shape: (1,)
+prediction: [预测值]
 ```
 
 `n_estimators` 与 `learning_rate` 需要共同考虑：减小学习率时通常需要增加树的数量；`max_depth` 过大则会提高单棵树的复杂度和过拟合风险。

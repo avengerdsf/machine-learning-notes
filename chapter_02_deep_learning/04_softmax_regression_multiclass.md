@@ -225,6 +225,9 @@ import torch
 from torch import nn
 
 
+torch.manual_seed(0)
+
+
 class MulticlassClassifier(nn.Module):
     def __init__(self):
         super().__init__()
@@ -260,6 +263,16 @@ print("probabilities shape:", probabilities.shape)
 print("probability sums:", probabilities.sum(dim=1))
 print("predictions:", predictions)
 print("loss:", loss.item())
+```
+
+预期输出：
+
+```text
+logits shape: torch.Size([4, 3])
+probabilities shape: torch.Size([4, 3])
+probability sums: tensor([1., 1., 1., 1.])
+predictions: tensor([1, 1, 1, 1])
+loss: 1.1427730321884155
 ```
 
 `logits` 和 `probabilities` 的形状均为 `(4, 3)`，`predictions` 的形状为 `(4,)`。每个样本的三个概率之和为 $1$。这段代码展示 Softmax 多分类的前向计算和损失计算，不包含优化器与参数更新。

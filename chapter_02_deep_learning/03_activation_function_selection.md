@@ -104,6 +104,13 @@ print("input shape:", x.shape)
 print("output shape:", probabilities.shape)
 ```
 
+预期输出：
+
+```text
+input shape: torch.Size([4, 25])
+output shape: torch.Size([4, 1])
+```
+
 输入形状为 `(4, 25)`，输出形状为 `(4, 1)`。这段代码只展示激活函数在网络中的位置，不包含损失函数、反向传播和参数更新。
 
 ## 参考资料

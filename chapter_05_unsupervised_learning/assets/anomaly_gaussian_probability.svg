@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="500" viewBox="0 0 760 500">
+  <defs>
+    <radialGradient id="density" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.42"/>
+      <stop offset="42%" stop-color="#60a5fa" stop-opacity="0.22"/>
+      <stop offset="72%" stop-color="#bfdbfe" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .title{font:700 24px Arial,"Microsoft YaHei",sans-serif;fill:#111827;text-anchor:middle}
+      .label{font:14px Arial,"Microsoft YaHei",sans-serif;fill:#374151}
+      .axis{stroke:#111827;stroke-width:2}
+      .grid{stroke:#e5e7eb;stroke-width:1}
+      .normal{fill:#2563eb;stroke:#1d4ed8;stroke-width:1.5}
+      .anomaly{fill:#dc2626;stroke:#991b1b;stroke-width:2}
+      .contour{fill:none;stroke:#2563eb;stroke-width:2;stroke-opacity:.35}
+    </style>
+  </defs>
+
+  <rect width="760" height="500" fill="#ffffff"/>
+  <text x="380" y="36" class="title">低概率区域中的异常样本</text>
+
+  <g transform="translate(80,70)">
+    <line x1="0" y1="360" x2="600" y2="360" class="axis"/>
+    <line x1="0" y1="360" x2="0" y2="20" class="axis"/>
+    <text x="610" y="366" class="label">x₁</text>
+    <text x="-18" y="14" class="label">x₂</text>
+
+    <g>
+      <line x1="100" y1="20" x2="100" y2="360" class="grid"/>
+      <line x1="200" y1="20" x2="200" y2="360" class="grid"/>
+      <line x1="300" y1="20" x2="300" y2="360" class="grid"/>
+      <line x1="400" y1="20" x2="400" y2="360" class="grid"/>
+      <line x1="500" y1="20" x2="500" y2="360" class="grid"/>
+      <line x1="0" y1="280" x2="600" y2="280" class="grid"/>
+      <line x1="0" y1="200" x2="600" y2="200" class="grid"/>
+      <line x1="0" y1="120" x2="600" y2="120" class="grid"/>
+      <line x1="0" y1="40" x2="600" y2="40" class="grid"/>
+    </g>
+
+    <ellipse cx="300" cy="190" rx="230" ry="145" fill="url(#density)"/>
+    <ellipse cx="300" cy="190" rx="85" ry="52" class="contour"/>
+    <ellipse cx="300" cy="190" rx="145" ry="88" class="contour"/>
+    <ellipse cx="300" cy="190" rx="210" ry="128" class="contour"/>
+
+    <circle cx="260" cy="205" r="5" class="normal"/>
+    <circle cx="315" cy="178" r="5" class="normal"/>
+    <circle cx="340" cy="212" r="5" class="normal"/>
+    <circle cx="280" cy="160" r="5" class="normal"/>
+    <circle cx="360" cy="185" r="5" class="normal"/>
+    <circle cx="230" cy="188" r="5" class="normal"/>
+    <circle cx="390" cy="224" r="5" class="normal"/>
+    <circle cx="300" cy="238" r="5" class="normal"/>
+    <circle cx="250" cy="145" r="5" class="normal"/>
+    <circle cx="330" cy="150" r="5" class="normal"/>
+
+    <circle cx="535" cy="65" r="8" class="anomaly"/>
+    <text x="444" y="53" class="label">p(x) &lt; ε，异常</text>
+    <line x1="510" y1="60" x2="528" y2="64" stroke="#991b1b" stroke-width="1.5"/>
+
+    <text x="230" y="330" class="label">p(x) ≥ ε，正常区域</text>
+  </g>
+</svg>

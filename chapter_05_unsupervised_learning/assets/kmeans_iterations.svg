@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="855" viewBox="0 0 640 720">
+  <style>
+    text { font-family: Arial, "Noto Sans CJK SC", sans-serif; fill: #1f2937; }
+    .title { font-size: 18px; font-weight: 700; text-anchor: middle; }
+    .note { font-size: 13px; text-anchor: middle; fill: #4b5563; }
+    .panel { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; rx: 10; }
+    .axis { stroke: #94a3b8; stroke-width: 1.2; }
+    .guide { stroke: #cbd5e1; stroke-width: 1.2; stroke-dasharray: 5 5; }
+    .point { stroke: #ffffff; stroke-width: 1.5; }
+    .unassigned { fill: #64748b; }
+    .blue { fill: #2563eb; }
+    .orange { fill: #ea580c; }
+    .green { fill: #16a34a; }
+    .centroid-blue { stroke: #1d4ed8; }
+    .centroid-orange { stroke: #c2410c; }
+    .centroid-green { stroke: #15803d; }
+    .centroid { stroke-width: 4; stroke-linecap: round; }
+  </style>
+
+  <text x="320" y="28" class="title">K-means 的一次完整迭代</text>
+
+  <g transform="translate(20,50)">
+    <rect width="285" height="315" class="panel"/>
+    <text x="142.5" y="28" class="title">1. 初始化质心</text>
+    <line x1="38" y1="275" x2="260" y2="275" class="axis"/>
+    <line x1="38" y1="275" x2="38" y2="55" class="axis"/>
+    <g class="unassigned">
+      <circle cx="70" cy="225" r="6" class="point"/><circle cx="84" cy="205" r="6" class="point"/>
+      <circle cx="96" cy="232" r="6" class="point"/><circle cx="112" cy="211" r="6" class="point"/>
+      <circle cx="155" cy="126" r="6" class="point"/><circle cx="169" cy="104" r="6" class="point"/>
+      <circle cx="181" cy="135" r="6" class="point"/><circle cx="194" cy="113" r="6" class="point"/>
+      <circle cx="207" cy="220" r="6" class="point"/><circle cx="222" cy="198" r="6" class="point"/>
+      <circle cx="236" cy="228" r="6" class="point"/><circle cx="244" cy="207" r="6" class="point"/>
+    </g>
+    <g class="centroid centroid-blue"><line x1="61" y1="177" x2="75" y2="191"/><line x1="75" y1="177" x2="61" y2="191"/></g>
+    <g class="centroid centroid-orange"><line x1="127" y1="75" x2="141" y2="89"/><line x1="141" y1="75" x2="127" y2="89"/></g>
+    <g class="centroid centroid-green"><line x1="211" y1="160" x2="225" y2="174"/><line x1="225" y1="160" x2="211" y2="174"/></g>
+    <text x="142.5" y="300" class="note">随机选择三个初始质心</text>
+  </g>
+
+  <g transform="translate(325,50)">
+    <rect width="285" height="315" class="panel"/>
+    <text x="142.5" y="28" class="title">2. 分配到最近质心</text>
+    <line x1="38" y1="275" x2="260" y2="275" class="axis"/>
+    <line x1="38" y1="275" x2="38" y2="55" class="axis"/>
+    <line x1="120" y1="55" x2="120" y2="275" class="guide"/>
+    <line x1="195" y1="55" x2="195" y2="275" class="guide"/>
+    <g class="blue">
+      <circle cx="70" cy="225" r="6" class="point"/><circle cx="84" cy="205" r="6" class="point"/>
+      <circle cx="96" cy="232" r="6" class="point"/><circle cx="112" cy="211" r="6" class="point"/>
+    </g>
+    <g class="orange">
+      <circle cx="155" cy="126" r="6" class="point"/><circle cx="169" cy="104" r="6" class="point"/>
+      <circle cx="181" cy="135" r="6" class="point"/><circle cx="194" cy="113" r="6" class="point"/>
+    </g>
+    <g class="green">
+      <circle cx="207" cy="220" r="6" class="point"/><circle cx="222" cy="198" r="6" class="point"/>
+      <circle cx="236" cy="228" r="6" class="point"/><circle cx="244" cy="207" r="6" class="point"/>
+    </g>
+    <g class="centroid centroid-blue"><line x1="61" y1="177" x2="75" y2="191"/><line x1="75" y1="177" x2="61" y2="191"/></g>
+    <g class="centroid centroid-orange"><line x1="127" y1="75" x2="141" y2="89"/><line x1="141" y1="75" x2="127" y2="89"/></g>
+    <g class="centroid centroid-green"><line x1="211" y1="160" x2="225" y2="174"/><line x1="225" y1="160" x2="211" y2="174"/></g>
+    <text x="142.5" y="300" class="note">颜色表示当前簇索引 c⁽ⁱ⁾</text>
+  </g>
+
+  <g transform="translate(20,385)">
+    <rect width="285" height="315" class="panel"/>
+    <text x="142.5" y="28" class="title">3. 更新质心</text>
+    <line x1="38" y1="275" x2="260" y2="275" class="axis"/>
+    <line x1="38" y1="275" x2="38" y2="55" class="axis"/>
+    <g class="blue">
+      <circle cx="70" cy="225" r="6" class="point"/><circle cx="84" cy="205" r="6" class="point"/>
+      <circle cx="96" cy="232" r="6" class="point"/><circle cx="112" cy="211" r="6" class="point"/>
+    </g>
+    <g class="orange">
+      <circle cx="155" cy="126" r="6" class="point"/><circle cx="169" cy="104" r="6" class="point"/>
+      <circle cx="181" cy="135" r="6" class="point"/><circle cx="194" cy="113" r="6" class="point"/>
+    </g>
+    <g class="green">
+      <circle cx="207" cy="220" r="6" class="point"/><circle cx="222" cy="198" r="6" class="point"/>
+      <circle cx="236" cy="228" r="6" class="point"/><circle cx="244" cy="207" r="6" class="point"/>
+    </g>
+    <line x1="68" y1="184" x2="91" y2="218" class="guide"/>
+    <line x1="134" y1="82" x2="175" y2="120" class="guide"/>
+    <line x1="218" y1="167" x2="227" y2="213" class="guide"/>
+    <g class="centroid centroid-blue"><line x1="84" y1="211" x2="98" y2="225"/><line x1="98" y1="211" x2="84" y2="225"/></g>
+    <g class="centroid centroid-orange"><line x1="168" y1="113" x2="182" y2="127"/><line x1="182" y1="113" x2="168" y2="127"/></g>
+    <g class="centroid centroid-green"><line x1="220" y1="206" x2="234" y2="220"/><line x1="234" y1="206" x2="220" y2="220"/></g>
+    <text x="142.5" y="300" class="note">质心移动到簇内样本均值</text>
+  </g>
+
+  <g transform="translate(325,385)">
+    <rect width="285" height="315" class="panel"/>
+    <text x="142.5" y="28" class="title">4. 重复直到收敛</text>
+    <line x1="38" y1="275" x2="260" y2="275" class="axis"/>
+    <line x1="38" y1="275" x2="38" y2="55" class="axis"/>
+    <g class="blue">
+      <circle cx="70" cy="225" r="6" class="point"/><circle cx="84" cy="205" r="6" class="point"/>
+      <circle cx="96" cy="232" r="6" class="point"/><circle cx="112" cy="211" r="6" class="point"/>
+    </g>
+    <g class="orange">
+      <circle cx="155" cy="126" r="6" class="point"/><circle cx="169" cy="104" r="6" class="point"/>
+      <circle cx="181" cy="135" r="6" class="point"/><circle cx="194" cy="113" r="6" class="point"/>
+    </g>
+    <g class="green">
+      <circle cx="207" cy="220" r="6" class="point"/><circle cx="222" cy="198" r="6" class="point"/>
+      <circle cx="236" cy="228" r="6" class="point"/><circle cx="244" cy="207" r="6" class="point"/>
+    </g>
+    <g class="centroid centroid-blue"><line x1="84" y1="211" x2="98" y2="225"/><line x1="98" y1="211" x2="84" y2="225"/></g>
+    <g class="centroid centroid-orange"><line x1="168" y1="113" x2="182" y2="127"/><line x1="182" y1="113" x2="168" y2="127"/></g>
+    <g class="centroid centroid-green"><line x1="220" y1="206" x2="234" y2="220"/><line x1="234" y1="206" x2="220" y2="220"/></g>
+    <text x="142.5" y="300" class="note">分配与质心不再发生变化</text>
+  </g>
+</svg>

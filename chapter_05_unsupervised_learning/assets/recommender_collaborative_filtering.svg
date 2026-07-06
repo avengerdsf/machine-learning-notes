@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560">
+  <defs>
+    <style>
+      .title{font:700 24px Arial,"Microsoft YaHei",sans-serif;fill:#111827;text-anchor:middle}
+      .label{font:15px Arial,"Microsoft YaHei",sans-serif;fill:#374151}
+      .small{font:13px Arial,"Microsoft YaHei",sans-serif;fill:#4b5563}
+      .box{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:12}
+      .box2{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:12}
+      .box3{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:12}
+      .arrow{stroke:#111827;stroke-width:2;marker-end:url(#arrow)}
+      .cell{fill:#ffffff;stroke:#d1d5db;stroke-width:1}
+      .rated{fill:#dbeafe;stroke:#60a5fa;stroke-width:1}
+      .missing{fill:#f3f4f6;stroke:#d1d5db;stroke-width:1}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#111827"/>
+    </marker>
+  </defs>
+  <rect width="760" height="500" fill="#ffffff"/>
+  <text x="380" y="38" class="title">协同过滤：已知用户偏好时学习物品特征</text>
+
+  <g transform="translate(45,85)">
+    <rect x="0" y="0" width="210" height="210" class="box"/>
+    <text x="105" y="28" class="label" text-anchor="middle">评分矩阵 Y 与 R</text>
+    <g transform="translate(38,55)">
+      <rect x="0" y="0" width="32" height="32" class="rated"/><text x="16" y="21" class="small" text-anchor="middle">5</text>
+      <rect x="32" y="0" width="32" height="32" class="rated"/><text x="48" y="21" class="small" text-anchor="middle">5</text>
+      <rect x="64" y="0" width="32" height="32" class="missing"/><text x="80" y="21" class="small" text-anchor="middle">?</text>
+      <rect x="96" y="0" width="32" height="32" class="missing"/><text x="112" y="21" class="small" text-anchor="middle">?</text>
+      <rect x="0" y="32" width="32" height="32" class="rated"/><text x="16" y="53" class="small" text-anchor="middle">5</text>
+      <rect x="32" y="32" width="32" height="32" class="missing"/><text x="48" y="53" class="small" text-anchor="middle">?</text>
+      <rect x="64" y="32" width="32" height="32" class="rated"/><text x="80" y="53" class="small" text-anchor="middle">4</text>
+      <rect x="96" y="32" width="32" height="32" class="missing"/><text x="112" y="53" class="small" text-anchor="middle">?</text>
+      <rect x="0" y="64" width="32" height="32" class="missing"/><text x="16" y="85" class="small" text-anchor="middle">?</text>
+      <rect x="32" y="64" width="32" height="32" class="rated"/><text x="48" y="85" class="small" text-anchor="middle">4</text>
+      <rect x="64" y="64" width="32" height="32" class="missing"/><text x="80" y="85" class="small" text-anchor="middle">?</text>
+      <rect x="96" y="64" width="32" height="32" class="missing"/><text x="112" y="85" class="small" text-anchor="middle">?</text>
+      <rect x="0" y="96" width="32" height="32" class="missing"/><text x="16" y="117" class="small" text-anchor="middle">?</text>
+      <rect x="32" y="96" width="32" height="32" class="missing"/><text x="48" y="117" class="small" text-anchor="middle">?</text>
+      <rect x="64" y="96" width="32" height="32" class="rated"/><text x="80" y="117" class="small" text-anchor="middle">5</text>
+      <rect x="96" y="96" width="32" height="32" class="rated"/><text x="112" y="117" class="small" text-anchor="middle">4</text>
+    </g>
+    <text x="105" y="190" class="small" text-anchor="middle">只在 R=1 的位置计算误差</text>
+  </g>
+
+  <line x1="270" y1="190" x2="335" y2="190" class="arrow"/>
+
+  <g transform="translate(350,85)">
+    <rect x="0" y="0" width="170" height="210" class="box2"/>
+    <text x="85" y="30" class="label" text-anchor="middle">第 1 步</text>
+    <text x="85" y="65" class="label" text-anchor="middle">已知 W,b</text>
+    <text x="85" y="105" class="small" text-anchor="middle">用户偏好已知</text>
+    <text x="85" y="135" class="small" text-anchor="middle">根据评分误差</text>
+    <text x="85" y="165" class="label" text-anchor="middle">学习物品特征 X</text>
+    <text x="85" y="190" class="small" text-anchor="middle">x⁽ⁱ⁾ 是未知量</text>
+  </g>
+
+  <line x1="535" y1="190" x2="610" y2="190" class="arrow"/>
+
+  <g transform="translate(625,85)">
+    <rect x="0" y="0" width="95" height="210" class="box3"/>
+    <text x="47" y="35" class="label" text-anchor="middle">预测</text>
+    <text x="47" y="82" class="small" text-anchor="middle">XWᵀ+b</text>
+    <text x="47" y="125" class="small" text-anchor="middle">补全 ?</text>
+    <text x="47" y="168" class="small" text-anchor="middle">排序推荐</text>
+  </g>
+
+  <g transform="translate(120,340)">
+    <rect x="0" y="0" width="520" height="95" class="box3"/>
+    <text x="260" y="30" class="label" text-anchor="middle">完整协同过滤</text>
+    <text x="260" y="58" class="small" text-anchor="middle">每轮根据当前误差计算梯度</text>
+    <text x="260" y="82" class="small" text-anchor="middle">同时更新 W → b → X，只在 R=1 的评分位置计算误差</text>
+  </g>
+
+  <text x="380" y="500" class="label" text-anchor="middle">和线性回归的区别：线性回归固定输入特征；协同过滤把物品特征 X 也作为需要学习的参数。</text>
+</svg>
